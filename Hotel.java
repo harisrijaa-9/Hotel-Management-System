@@ -1,87 +1,114 @@
-import java.util.Scanner;
-import java.io.*;
+package tube;
+import java.util.*;
+public class hotel {
+	public static void main(String[] args) { // TODO Auto-generated method stub
 
-class Hotel {
+int qty,amt,bill=0,i;
+		Scanner in=new Scanner(System.in);
 
-    private int room_no;
-    private String name;
-    private String address;
-    private String phone;
+	
+		System.out.println("Mini tech hacker ");
+		do {
+		System.out.println("1. Dosa"); 
 
-    public void mainMenu() {
-        int choice;
-        Scanner scanner = new Scanner(System.in);
+		System.out.println("2. sambar");
 
-        do {
-            System.out.println("\n\t\t\t\t*************************");
-            System.out.println("\n\t\t\t\t SIMPLE HOTEL MANAGEMENT ");
-            System.out.println("\n\t\t\t\t      * MAIN MENU *");
-            System.out.println("\n\t\t\t\t*************************");
-            System.out.println("\n\n\n\t\t\t1.Book A Room");
-            System.out.println("\t\t\t2.Customer Records");
-            System.out.println("\t\t\t3.Rooms Allotted");
-            System.out.println("\t\t\t4.Edit Record");
-            System.out.println("\t\t\t5.Exit");
-            System.out.print("\n\n\t\t\tEnter Your Choice: ");
-            choice = scanner.nextInt();
+		System.out.println("3. Appam");
+		System.out.println("4.idli");
 
-            switch (choice) {
-                case 1:
-                    add();
-                    break;
-                case 2:
-                    display();
-                    break;
-                case 3:
-                    rooms();
-                    break;
-                case 4:
-                    edit();
-                    break;
-                case 5:
-                    break;
-                default:
-                    System.out.println("\n\n\t\t\tWrong choice.....!!!");
-            }
+		System.out.println("5.vada"); 
+		System.out.println("what is your choice");
 
-        } while (choice != 5);
+		int ch=in.nextInt();
 
-        scanner.close();
-    }
+		switch(ch)
 
-    public void add() {
-        // Implementation for adding a room
-    }
+		{ 
+		case 1:
+		
 
-    public void display() {
-        // Implementation for displaying a customer's details
-    }
+		System.out.println("dosa qty?");
+		qty=in.nextInt();
+		amt=qty*10;
 
-    public void rooms() {
-        // Implementation for displaying all allotted rooms
-    }
+		
+		bill=bill+amt;
 
-    public void edit() {
-        // Implementation for editing a record
-    }
+		break;
 
-    // Other methods...
+		case 2:
+
+		System.out.println("sambar qty?"); 
+		qty=in.nextInt(); 
+		
+
+		amt=qty*20;
+		bill=bill+amt;
+		break;
+
+		case 3:
+
+		System.out.println("Appam qty?"); 
+		qty=in.nextInt();
+
+		amt=qty*30;
+		bill=bill+amt;
+
+		break;
+		case 4:
+
+		System.out.println("idli qty?");
+
+		qty=in.nextInt();
+
+		amt=qty*5;
+
+		bill=bill+amt;
+
+		break;
+
+		case 5:
+
+		System.out.println("vada qty?");
+
+		qty=in.nextInt(); 
+		amt=qty*5; 
+		bill=bill+amt;
+
+		break;
+
+		default: 
+			System.out.println(" sry, invalid food so choice valid food!"); 
+			break;
+		}
+		System.out.println("you want con..press 1 or press 0");
+
+		i=in.nextInt();
+
+	}
+	while(i==1);
+
+		System.out.println("your total bill is?"+bill);
+		
 }
-
-public class Main {
-    public static void main(String[] args) {
-        Hotel h = new Hotel();
-
-        System.out.println("\n\t\t\t****************************");
-        System.out.println("\n\t\t\t* HOTEL MANAGEMENT PROJECT *");
-        System.out.println("\n\t\t\t****************************");
-        System.out.println("\n\n\t\tDeveloped By:");
-        System.out.println("\t Hari Srijaa");
-        System.out.print("\n\n\n\n\n\n\n\t\t\t\t\tPress Enter to continue....!!");
-
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-
-        h.mainMenu();
-    }
 }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
